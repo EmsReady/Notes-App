@@ -15,7 +15,7 @@
     <ul>
       <li v-for="(note, index) in userinputs" :key="index">
         {{ note }}
-        <button @click="deleteNote(index)">Delete</button> <!-- 👈 New Delete Button -->
+        <button @click="deleteNote(index)">Delete</button>
       </li>
     </ul>
   </div>
@@ -40,7 +40,7 @@
           this.userinputs = [];
         },
         deleteNote(index) {
-          this.userinputs.splice(index, 1); // 👈 Removes the note at the given index
+          this.userinputs.splice(index, 1);
         }
       }
     }).mount('#app');
